@@ -1,0 +1,1 @@
+This project tests whether there was significant borrowing between regulations of the Royal Navy and the US Navy in the early years of the USN's existence, using the tools of computational text analysis.
