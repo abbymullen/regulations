@@ -59,3 +59,8 @@ best_matches <- all_matches |>
   filter(borrower_doc != match_doc) |>
   select("borrower_section", "match_section", score, starts_with("borrower_"), starts_with("match_"), everything()) |>
   arrange(desc(score))
+
+fs::dir_create("tmp")
+
+write_rds(best_matches, "tmp/best-matches.rds", compress = "xz")
+write_rds(sections, "tmp/sections.rds", compress = "xz")
