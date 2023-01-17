@@ -1,6 +1,6 @@
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(textreuse))
-options("mc.cores" = 10L)
+options("mc.cores" = 8L)
 
 regs <- read_csv("data/regulations.csv",
                  col_types = cols(
@@ -10,12 +10,13 @@ regs <- read_csv("data/regulations.csv",
                    title = col_character()
                  ))
 
-h <- 120
-b <- 60
+h <- 960
+b <- 480
 minhash <- minhash_generator(n = h, seed = 2008)
 
 sections <- TextReuseCorpus(dir = "data/regulations-split",
-                            tokenizer = tokenize_ngrams, n = 5,
+                            tokenizer = tokenize_ngrams,
+                            n = 5,
                             keep_tokens = FALSE,
                             minhash_func = minhash)
 
