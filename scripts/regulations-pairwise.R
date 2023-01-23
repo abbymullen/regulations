@@ -1,5 +1,8 @@
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(textreuse))
+suppressPackageStartupMessages(library(fs))
+suppressPackageStartupMessages(library(readr))
+source("R/helpers.R")
 options("mc.cores" = 8L)
 
 regs <- read_csv("data/regulations.csv",
@@ -11,7 +14,13 @@ regs <- read_csv("data/regulations.csv",
                  ))
 
 
-sections <- TextReuseCorpus(dir = "data/regulations-split",
+raw_texts <- fs::dir_ls("data/regulations-split") |> map_chr(read_file)
+names(raw_texts) <- raw_texts |> names() |> basename() |> tools::file_path_sans_ext()
+
+stop_phrases <- read_lines("data/stops.txt")
+texts <- clean_texts(raw_texts, stops)
+
+sections <- TextReuseCorpus(text = texts,
                             tokenizer = tokenize_ngrams,
                             n = 5,
                             keep_tokens = FALSE)
