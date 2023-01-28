@@ -5,7 +5,7 @@ sections <- read_rds("tmp/sections.rds")
 best_matches <- read_rds("tmp/best-matches.rds")
 
 best_matches <- best_matches |>
-  filter(score > 0.02) |>
+  filter(score >= 0.025) |>
   arrange(borrower_section, desc(score)) |>
   group_by(borrower_section) |>
   mutate(match_num = row_number(match_section)) |>
@@ -38,6 +38,4 @@ for (section in names(sections)) {
   row_num <- row_num + 1
 }
 
-output <- output |> filter(str_detect(id, "^usn"))
-
-write_csv(output, "tmp/usn-regulations-with-matches.csv", na = "")
+write_csv(output, "tmp/regulation-docs-with-matches.csv", na = "")
