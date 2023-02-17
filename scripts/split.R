@@ -4,7 +4,7 @@ library(readr)
 
 filenames <- fs::dir_ls("data/regulations")
 outdir <- "data/regulations-split"
-if(fs::dir_exists(outdir)) {
+if (fs::dir_exists(outdir)) {
   stop("Delete the existing splits before running this script")
 }
 fs::dir_create(outdir)

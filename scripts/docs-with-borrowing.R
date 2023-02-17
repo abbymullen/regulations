@@ -32,7 +32,8 @@ for (section in names(sections)) {
     match_section <- current_matches[[match, "match_section"]]
     match_score <- current_matches[[match, "score"]]
     match_text <- sections[[match_section]] |> content() |> as.character()
-    output[row_num, match_col] <- str_c(match_section, " (", match_score,  "): ", match_text)
+    output[row_num, match_col] <-
+     str_c(match_section, " (", round(match_score, 3),  "): ", match_text)
   }
 
   row_num <- row_num + 1

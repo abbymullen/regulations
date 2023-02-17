@@ -3,7 +3,7 @@ clean_texts <- function(texts, stops) {
   out <- vector("character", length(texts))
   names(out) <- names(texts)
   for (i in seq_len(length(out))) {
-    current_text <- texts[i]
+    current_text <- stringr::str_to_lower(texts[i])
     for (y in seq_len(length(stops))) {
       current_text <- stringr::str_replace_all(current_text, stops[y], "")
     }
@@ -17,7 +17,7 @@ testdocs <- c(
   "This document ought to be removed as soon as possible"
   )
 testout <- clean_texts(testdocs, c("ought to be removed", "forbidden phrase"))
-expectedout <- c("This document contains a  which  posthaste.", "This document  as soon as possible")
+expectedout <- c("this document contains a  which  posthaste.", "this document  as soon as possible")
 
 stopifnot(all(testout == expectedout))
 
