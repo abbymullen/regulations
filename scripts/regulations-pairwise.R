@@ -15,10 +15,13 @@ regs <- read_csv("data/regulations.csv",
 
 
 raw_texts <- fs::dir_ls("data/regulations-split") |> map_chr(read_file)
-names(raw_texts) <- raw_texts |> names() |> basename() |> tools::file_path_sans_ext()
+names(raw_texts) <- raw_texts |>
+  names() |>
+  basename() |>
+  tools::file_path_sans_ext()
 
 stop_phrases <- read_lines("data/stops.txt")
-texts <- clean_texts(raw_texts, stops)
+texts <- clean_texts(raw_texts, stop_phrases)
 
 sections <- TextReuseCorpus(text = texts,
                             tokenizer = tokenize_ngrams,
@@ -46,7 +49,7 @@ scores_for_join <- bind_rows(scores, scores_swapped) %>%
 
 
 get_doc <- function(x) {
-  str_extract(x, "\\w{2,3}-\\d{4}")
+  stringr::str_extract(x, "\\w{2,3}-\\d{4}")
 }
 
 regs_borrower <- regs |>
@@ -68,7 +71,12 @@ all_matches <- scores_for_join |>
 best_matches <- all_matches |>
   filter(borrower_date >= match_date) |>
   filter(borrower_doc != match_doc) |>
-  select("borrower_section", "match_section", score, starts_with("borrower_"), starts_with("match_"), everything()) |>
+  select("borrower_section",
+         "match_section",
+         score,
+         starts_with("borrower_"),
+         starts_with("match_"),
+         everything()) |>
   arrange(desc(score))
 
 fs::dir_create("tmp")
