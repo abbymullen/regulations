@@ -24,8 +24,7 @@ stop_phrases <- read_lines("data/stops.txt")
 texts <- clean_texts(raw_texts, stop_phrases)
 
 sections <- TextReuseCorpus(text = texts,
-                            tokenizer = tokenize_ngrams,
-                            n = 5,
+                            tokenizer = regs_tokenizer,
                             keep_tokens = FALSE)
 
 comparisons <- pairwise_compare(sections, jaccard_similarity,
