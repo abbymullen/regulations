@@ -17,7 +17,7 @@ testdocs <- c(
   "This document ought to be removed as soon as possible"
   )
 testout <- clean_texts(testdocs, c("ought to be removed", "forbidden phrase"))
-expectedout <- c("This document contains a  which  posthaste.", "This document  as soon as possible")
+expectedout <- c("this document contains a  which  posthaste.", "this document  as soon as possible")
 
 stopifnot(all(testout == expectedout))
 
