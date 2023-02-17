@@ -1,5 +1,5 @@
-tokenizer <- function(x) {
-  
+regs_tokenizer <- function(x) {
+  tokenizers::tokenize_ngrams(x, n_min = 3, n = 5, simplify = TRUE)
 }
 
 clean_texts <- function(texts, stops) {
