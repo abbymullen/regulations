@@ -1,3 +1,7 @@
+tokenizer <- function(x) {
+  
+}
+
 clean_texts <- function(texts, stops) {
   require(stringr)
   out <- vector("character", length(texts))
