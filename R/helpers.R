@@ -3,7 +3,7 @@ clean_texts <- function(texts, stops) {
   out <- vector("character", length(texts))
   names(out) <- names(texts)
   for (i in seq_len(length(out))) {
-    current_text <- texts[i]
+    current_text <- stringr::str_to_lower(texts[i])
     for (y in seq_len(length(stops))) {
       current_text <- stringr::str_replace_all(current_text, stops[y], "")
     }
