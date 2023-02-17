@@ -37,8 +37,7 @@ Run this to get the results for just those documents
 
 ```{r}
 sections <- TextReuseCorpus(text = documents,
-                            tokenizer = tokenize_ngrams,
-                            n = 5,
+                            tokenizer = regs_tokenizer,
                             keep_tokens = TRUE,
 														progress = FALSE)
 
@@ -48,8 +47,8 @@ comparisons
 ```
 
 ```{r}
-tokens_1 <- textreuse::tokenize_ngrams(documents[1], n = 3)
-tokens_2 <- textreuse::tokenize_ngrams(documents[2], n = 3)
+tokens_1 <- regs_tokenizer(documents[1])
+tokens_2 <- regs_tokenizer(documents[2])
 intersect(tokens_1, tokens_2)
 jaccard_similarity(tokens_1, tokens_2)
 ```
