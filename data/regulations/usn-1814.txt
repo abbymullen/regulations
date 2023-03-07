@@ -51,13 +51,7 @@ Of the duties of a Captain or Commander.
 31. He is not to suffer any person to suttle or sell any sorts of liquors to the ship's company, nor any debts for the same to be inserted in the slop-book, on any pretence whatsoever.
 32. Before the ship proceeds to sea, he is, without any partiality or favor, to examine and rate the ship's company, according to their abilities, and to take care that every person in the ship, without distinction, do actually perform the duty for which he is rated.
 33. Before the ship sails, he is to make a regulation for quartering the officers and men, and distributing them to the great guns, small-arms, rigging, &c.; and a list of such order and distribution is to be fixed up in the most public place of the ship. He is also frequently to exercise the ship's company in the use of the great guns and small-arms; and to set down in his journal the times he exercises them.
-34. The following number of men at least, (exclusive of marines) are to be exercised and trained up to the use of small- arms, under the particular care of a lieutenant or master at arms.
- 44 gun ship,	 75 men.
- 36 do.	 60 do.
- 32 do.	 45 do.
- 24 and under 32 gun ship,	 40 do.
- 18 and under 24 do.	 30 do.
-All smaller vessels	 20 do.
+34. The following number of men at least, (exclusive of marines) are to be exercised and trained up to the use of small- arms, under the particular care of a lieutenant or master at arms. 44 gun ship, 75 men. 36 do.	 60 do. 32 do.	 45 do. 24 and under 32 gun ship,	 40 do. 18 and under 24 do.	 30 do. All smaller vessels	 20 do.
 35. If any officers are absent from their duty when the ship is under sailing orders, he is to send their names to the navy- office, with the cause of their absence.
 36. He is to take care of his boats and secure them before blowing weather; also, the colors are not to be kept abroad in windy weather, but due care taken of them.
 37. He is not to carry any woman to sea, without orders from the navy-office, or the commander of the squadron.
@@ -66,18 +60,7 @@ All smaller vessels	 20 do.
 40. He is, by all opportunities, to send an account of his proceedings to the navy-office, with the condition of the ship, men, &c.; he is likewise to keep a punctual correspondence with every of the public officers, in whatsoever respectively concerns them.
 41. He is not to go into any port, but such as are directed by his orders, unless necessitously obliged, and then not to make any unnecessary stay; if employed in cruising, he is to keep the sea the time required by his orders, or give reasons for acting to the contrary.
 42. Upon all occasions of anchoring, he is to take great care in the choice of a good birth, and examine the quality of the ground for anchoring, where he is a stranger, sounding at least three cables lengths round the ship.
-43. In foreign ports he is to use the utmost good husbandry in careening the ship, and not to do it but under an absolute necessity; none are to be employed in careening and refitting the ship but the ship's company, where it can be avoided; and for the encouragement of his own men, they are entitled to an extraordinary allowance per day; and to prevent any abuse herein, each ship has the number of operative men limited as follows:
- 	 In the United States	 In all foreign parts
- To master carpenters,
-carpenter's mates, shipwrights and caulkers, for working on board the ship they belong to, in caulking and fitting her for careen, and graving or tallowing her, per day,	 50 cents	  75 cents.
- For working on board any other of the United States' ships.	 75 cents.	 1 dollar.
-And there shall be allowed no more for caulking a ship, fitting her for careen, graving or tallowing her, or other necessary works for each careening or cleaning, than what amounts to the labor of the following number of men for one day, viz.
-For a 44-- 180 men for one day.
-For a 36-- 160 do. do.
-For a 32-- 140 do. do.
-For a 24-- 90 do. do.
-For an 18-- 70 do. do.
-All under-- 30 do. do.
+43. In foreign ports he is to use the utmost good husbandry in careening the ship, and not to do it but under an absolute necessity; none are to be employed in careening and refitting the ship but the ship's company, where it can be avoided; and for the encouragement of his own men, they are entitled to an extraordinary allowance per day; and to prevent any abuse herein, each ship has the number of operative men limited as follows:	 In the United States	 In all foreign parts To master carpenters, carpenter's mates, shipwrights and caulkers, for working on board the ship they belong to, in caulking and fitting her for careen, and graving or tallowing her, per day,	 50 cents	  75 cents. For working on board any other of the United States' ships.	 75 cents.	 1 dollar. And there shall be allowed no more for caulking a ship, fitting her for careen, graving or tallowing her, or other necessary works for each careening or cleaning, than what amounts to the labor of the following number of men for one day, viz. For a 44-- 180 men for one day. For a 36-- 160 do. do. For a 32-- 140 do. do. For a 24-- 90 do. do. For an 18-- 70 do. do.All under-- 30 do. do.
 44. If he is obliged to take up money abroad, for the use of the ship, he is to negotiate it at the best exchange.
 45. He is to advise the proper officer of what bills he draws, with the reasons thereof, and with the said bills send duplicates of his accounts, and vouchers for his disbursements, signed by himself and purser.
 46. He is to take care that all stores brought on board, be delivered to the proper officers; and to take their receipts for the same.
@@ -226,82 +209,7 @@ For the purpose of establishing uniformity, the President orders as follows, viz
 1. The quarter-bill, log-tables or book, and journals of the officers, must be kept conformably to the annexed models.
 2. The captains or commanders will cause to be laid before them, the first and fifteenth of every month, the journals of the sea lieutenants, masters, midshipmen, and volunteers under their orders, and will examine and compare them with their own.
 3. If any of the said journals contain observations or remarks which may contribute to the improvement of geography, by ascertaining the latitude and longitude, fixing or rectifying the position of places, the heights and views of land, charts, plans or descriptions of any port, anchorage ground, coasts, islands, or danger little known; remarks relative to the direction and effects of currents, tides or winds: the officers or persons appointed to examine them, will make extracts of whatever appears to merit to be preserved; and after these extracts have been communicated to the officer or author of the journal from which they have been drawn, and that he has certified in writing to the fidelity of his journal, as well as of the charts, plans and views which he has joined to it, the same shall be signed by the officers and examiners, and transmitted with their opinion thereon to the secretary of the navy, to be preserved in the depot of charts, plans, and journals.
-MODEL OF A JOURNAL kept on board the United States [blank] of [blank] guns [blank] Commander, by [blank]
-H	K	F	Courses	Winds	 Occurrences, remarks and historical events, &c. made on board the U. States [blank] of [blank] guns [blank] Commander, on [blank] the [blank] day of [blank] ] year	Result of Day's work.
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12	 	 	 	 	 Distance per Log--	Course made good
-Distance.
-Diff. lat'de.
-Departure.
-Mer'd. distance.
-D.D. long'de.
-Long'de ob'd.
-Lat'de ob'd.
-Var'n pr. amp'de.
-Var'n pr. azim'th.
-Current.
-MODEL of a LOG-BOOK, kept on board the United States [blank] of [blank] guns, [blank] Commander, by [blank] Sailing Master.
-H	K	F	Courses	Winds	Occurrences and remark on board the United States Frigate [blank] of [blank] guns [blank] Commander, on [blank] the [blank] day of [blank] year [blank]
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12	 	 	 	 	
- 
- 
- 
- 
- 
- 
- 
-Lat'de Obs'd.
-Long'de Obs'd.
-Vari. Even'g Amp'de
-Vari. Morn'g Amp'de.
- 
-Distance per log--
-*****
+MODEL OF A JOURNAL kept on board the United States [blank] of [blank] guns [blank] Commander, by [blank] H	K	F	Courses	Winds	 Occurrences, remarks and historical events, &c. made on board the U. States [blank] of [blank] guns [blank] Commander, on [blank] the [blank] day of [blank] ] year	Result of Day's work.
 Regulations respecting Courts Martial.
 1. All courts martial are to be held, offences tried, sentences pronounced, and execution of such sentences done, agreeably to the articles and orders contained in an act of Congress, made on the 23d of April, in the year 1800, entitled, "An act for the better government of the navy of the United States."
 2. Courts martial may be convened as often as the President of the United States, the secretary of the navy, or commander in chief of a fleet, or commander of a squadron, while acting out of the United States, shall deem it necessary.
@@ -319,6 +227,4 @@ Regulations respecting Convoys.
 7. When different convoys set sail at the same time, or join at sea, they are to keep together so long as their courses lie together: when it thus happens, the eldest commander of a convoy shall command in the first post; the next eldest, in the second; and so on according to seniority.
 8. Commanders of different convoys are to wear the lights of their respective posts, and repeat the signals, in order, as is usual to flag-officers.
 9. Convoys are to sail like divisions, and proper signals to be made at separation.
-THE President of the United States of America, ordains and directs the commanders of squadrons, and all captains and other officers in the navy of the United States to execute, and cause to be executed, the aforesaid regulations.
-By command,
-Secretary of the Navy.
+THE President of the United States of America, ordains and directs the commanders of squadrons, and all captains and other officers in the navy of the United States to execute, and cause to be executed, the aforesaid regulations. By command, Secretary of the Navy.
