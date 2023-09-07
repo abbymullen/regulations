@@ -5,7 +5,7 @@ sections <- read_rds("tmp/sections.rds")
 best_matches <- read_rds("tmp/best-matches.rds")
 
 best_matches <- best_matches |>
-  filter(score >= 0.025) |>
+  filter(score >= 0.04) |>
   arrange(borrower_section, desc(score)) |>
   group_by(borrower_section) |>
   mutate(match_num = row_number(match_section)) |>

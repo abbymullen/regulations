@@ -11,26 +11,23 @@ Put the documents you want to compare here.
 
 ```{r}
 documents <- c(
-	"rn-1790-00036" = "II. The First Captain to the Admiral and Commander in Chief of the Fleet shall be received with a Guard without a Drum.",
-	"usn-1775-00046" = "The sentence of a court-martial for any capital offence, shall not be put in execution, until it be confirmed by the Commander in chief of the fleet; and it shall be the duty of the president of every court-martial, to transmit to the Commander in chief of the fleet, every sentence which shall be given, with a summary of the evidence and proceedings thereon, by the first opportunity.",
-	"usn-1775-00047" = "The Commander in chief of the fleet, for the time being, shall have power to pardon and remit any sentence of death, that shall be given in consequence of any of the afore mentioned Articles."
+	"usn1802" = "1. He is to inform the secretary of the navy of all his proceedings which relate to the service.",
+	"rn1790" = " ARTICLE I. The Flag- Officer, or Commander in Chief, is to inform the secretary of the Admiralty of the Admiralty all his Proceedings that relate to the service, for the Information of the Lord High Admiral, or Lords commissioners of the Admiralty."
 )
 ```
 
 
 ```{r}
-getwd()
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(textreuse))
 suppressPackageStartupMessages(library(readr))
-source("R/helpers.R")
-setwd("/Users/lmullen/github/abbymullen/regulations")
+source("../R/helpers.R")
 ```
 
 Run this to see how the cleaning is being applied
 
 ```{r}
-stop_phrases <- read_lines("data/stops.txt")
+stop_phrases <- read_lines("../data/stops.txt")
 documents <- clean_texts(documents, stop_phrases)
 ```
 
@@ -40,9 +37,8 @@ Run this to get the results for just those documents
 
 ```{r}
 sections <- TextReuseCorpus(text = documents,
-                            tokenizer = tokenize_ngrams,
-                            n = 5,
-                            keep_tokens = FALSE,
+                            tokenizer = regs_tokenizer,
+                            keep_tokens = TRUE,
 														progress = FALSE)
 
 comparisons <- pairwise_compare(sections, jaccard_similarity,
@@ -51,7 +47,8 @@ comparisons
 ```
 
 ```{r}
-tokens_1 <- textreuse::tokenize_ngrams(documents[1])
-tokens_2 <- textreuse::tokenize_ngrams(documents[2])
+tokens_1 <- regs_tokenizer(documents[1])
+tokens_2 <- regs_tokenizer(documents[2])
 intersect(tokens_1, tokens_2)
+jaccard_similarity(tokens_1, tokens_2)
 ```

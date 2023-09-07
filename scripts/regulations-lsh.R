@@ -15,8 +15,7 @@ b <- 480
 minhash <- minhash_generator(n = h, seed = 2008)
 
 sections <- TextReuseCorpus(dir = "data/regulations-split",
-                            tokenizer = tokenize_ngrams,
-                            n = 5,
+                            tokenizer = regs_tokenizer,
                             keep_tokens = FALSE,
                             minhash_func = minhash)
 
