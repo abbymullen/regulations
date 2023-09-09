@@ -17,6 +17,12 @@
 			text-align: center;
 		}
 
+		#comparison {
+			position: sticky;
+			top: 5rem;
+			overflow: clip;
+		}
+
 	</style>
 </head>
 
@@ -25,11 +31,11 @@
 		<h1>U.S. Navy Regulations, 1802</h1>
 		<div class="container">
 			<div class="row">
-				<div class="col-10">
+				<div class="col-6">
 					<table class="table table-hover table-sm align-middle table-striped">
 						<thead>
 							<tr>
-								<th style="width: 50%;">Text of the 1802 regulations</th>
+								<th style="width: 70%;">Text of the 1802 regulations</th>
 								<th class="centered">U.S. Navy 1800</th>
 								<th class="centered">Royal Navy 1790</th>
 								<th class="centered">U.S. Navy 1775</th>
@@ -40,9 +46,18 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col-2">
-					<h6>Original text that was borrowed</h6>
-					<p id="original"></p>
+				<div class="col-6">
+					<div id="comparison">
+						<h4>Comparison of regulations</h4>
+						<h5>U.S. Navy 1802</h5>
+						<p id="usn-1802"></p>
+						<h5>U.S. Navy 1800</h5>
+						<p id="usn-1800"></p>
+						<h5>Royal Navy 1790</h5>
+						<p id="rn-1790"></p>
+						<h5>U.S. Navy 1775</h5>
+						<p id="usn-1775"></p>
+					</div>
 				</div>
 			</div>
 		</div>
