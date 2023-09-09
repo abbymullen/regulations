@@ -7,6 +7,11 @@
 	<title>Bootstrap demo</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	<style>
+		.table {
+			/* --bs-table-hover-color: #55d5ac; */
+			--bs-table-hover-bg: #92b0f6;
+		}
+
 		td.centered,
 		th.centered {
 			text-align: center;
@@ -18,20 +23,29 @@
 <body>
 	<div class="container my-5">
 		<h1>U.S. Navy Regulations, 1802</h1>
-		<p id="original">This is where the original would go.</p>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th style="width: 50%;">Text</th>
-					<th class="centered">U.S. Navy 1800</th>
-					<th class="centered">Royal Navy 1790</th>
-					<th class="centered">U.S. Navy 1775</th>
-				</tr>
-			</thead>
-			<tbody id="matches-table">
+		<div class="container">
+			<div class="row">
+				<div class="col-10">
+					<table class="table table-hover table-sm align-middle table-striped">
+						<thead>
+							<tr>
+								<th style="width: 50%;">Text of the 1802 regulations</th>
+								<th class="centered">U.S. Navy 1800</th>
+								<th class="centered">Royal Navy 1790</th>
+								<th class="centered">U.S. Navy 1775</th>
+							</tr>
+						</thead>
+						<tbody id="matches-table">
 
-			</tbody>
-		</table>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-2">
+					<h6>Original text that was borrowed</h6>
+					<p id="original"></p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
