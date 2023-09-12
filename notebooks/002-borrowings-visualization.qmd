@@ -1,0 +1,67 @@
+---
+title: "Borrowing Visualization"
+format:
+  html:
+    embed-resources: true
+
+---
+
+```{r}
+library(tidyverse)
+library(textreuse)
+
+sections <- read_rds("../tmp/sections.rds")
+best_matches <- read_rds("../tmp/best-matches.rds")
+regulations <- read_csv("../data/regulations.csv", col_types = cols(
+  id = col_character(),
+  date = col_integer(),
+  navy = col_character(),
+  title = col_character()
+))
+```
+
+
+```{r}
+all_sections <- data_frame(id = names(sections)) |> 
+  mutate(regulation = str_extract(id, "\\w{2,3}-\\d{4}"))
+
+raw_texts <- fs::dir_ls("../data/regulations-split") |> map_chr(read_file)
+
+all_texts <- data_frame(id = names(raw_texts) |> basename() |> tools::file_path_sans_ext(),
+           text = unname(raw_texts))
+write_csv(all_texts, "../tmp/all-texts.csv")
+```
+
+
+Decide on the minimum allowable score to be counted as a match.
+
+```{r}
+min_score <- 0.04
+```
+
+
+Spread the data to show the regulations borrowed from.
+
+```{r}
+pivoted_matches <- best_matches |> 
+  filter(score >= min_score) |> 
+  arrange(borrower_section, match_section) |> 
+  group_by(borrower_section, match_doc) |> 
+  slice_max(score, n = 1, with_ties = FALSE) |> 
+  filter(borrower_doc == "usn-1802") |> 
+  select(borrower_section, match_doc, match_section) |> 
+  pivot_wider(names_from = match_doc, values_from = match_section)
+```
+
+Now do just the 1802 visualization
+
+```{r}
+regulation_to_use <- "usn-1802"
+all_sections |> 
+  filter(regulation == regulation_to_use) |> 
+  select(borrower_section = id) |> 
+  left_join(pivoted_matches |> filter(str_detect(borrower_section, regulation_to_use)),
+            by = "borrower_section") |> 
+  write_csv("../tmp/usn-1802-matches-table.csv", na = "")
+```
+
