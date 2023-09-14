@@ -26,13 +26,12 @@ const truncate = (s) => {
 };
 
 const tblRow = (d) => {
-  return `<td data-regulation=usn-1802 data-id=${d.borrower_section}>${truncate(
-    getReg(d.borrower_section)
-  )}</td><td class="centered" data-regulation=usn-1800 data-id=${d.usn_1800}>${isMatch(
-    d.usn_1800
-  )}</td><td class="centered" data-regulation=rn-1790 data-id=${d.rn_1790}>${isMatch(
-    d.rn_1790
-  )}</td><td class="centered" data-regulation=usn-1775 data-id=${d.usn_1775}>${isMatch(d.usn_1775)}</td>`;
+  return `
+  <td data-regulation=usn-1802 data-id=${d.borrower_section}>${truncate(getReg(d.borrower_section))}</td>
+  <td class="centered" data-regulation=usn-1800 data-id=${d.usn_1800}>${isMatch(d.usn_1800)}</td>
+  <td class="centered" data-regulation=usn-1798 data-id=${d.usn_1798}>${isMatch(d.usn_1798)}</td>
+  <td class="centered" data-regulation=rn-1790 data-id=${d.rn_1790}>${isMatch(d.rn_1790)}</td>
+  <td class="centered" data-regulation=usn-1775 data-id=${d.usn_1775}>${isMatch(d.usn_1775)}</td>`;
 };
 
 d3.select("#matches-table")
