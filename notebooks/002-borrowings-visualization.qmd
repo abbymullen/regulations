@@ -27,7 +27,7 @@ all_sections <- data_frame(id = names(sections)) |>
 
 raw_texts <- fs::dir_ls("../data/regulations-split") |> map_chr(read_file)
 
-all_texts <- data_frame(id = names(raw_texts) |> basename() |> tools::file_path_sans_ext(),
+all_texts <- tibble(id = names(raw_texts) |> basename() |> tools::file_path_sans_ext(),
            text = unname(raw_texts))
 write_csv(all_texts, "../tmp/all-texts.csv")
 ```
