@@ -8,16 +8,16 @@ const getReg = (id) => {
   if (filtered.length === 1) {
     return filtered[0].text;
   } else {
-    return "N/A";
+    return "";
   }
 };
 
 const isMatch = (x) => {
-  return x !== "" ? "✅" : "";
+  return x !== "" ? "✓" : "";
 };
 
 const truncate = (s) => {
-  let max = 40;
+  let max = 35;
   if (s.length <= max) {
     return s;
   } else {
@@ -27,7 +27,7 @@ const truncate = (s) => {
 
 const tblRow = (d) => {
   return `
-  <td data-regulation=usn-1802 data-id=${d.borrower_section}>${truncate(getReg(d.borrower_section))}</td>
+  <td data-regulation=usn-1802  data-id=${d.borrower_section}>${truncate(getReg(d.borrower_section))}</td>
   <td class="centered" data-regulation=usn-1800 data-id=${d.usn_1800}>${isMatch(d.usn_1800)}</td>
   <td class="centered" data-regulation=usn-1798 data-id=${d.usn_1798}>${isMatch(d.usn_1798)}</td>
   <td class="centered" data-regulation=rn-1790 data-id=${d.rn_1790}>${isMatch(d.rn_1790)}</td>
@@ -47,6 +47,8 @@ d3.selectAll("tr").on("click", function () {
     .each(function (d) {
       let reg = d3.select(this).attr("data-regulation");
       let id = d3.select(this).attr("data-id");
-      d3.select("#" + reg).text(getReg(id));
+      let text = getReg(id);
+      let node = d3.select("#" + reg);
+      node.text(text);
     });
 });
